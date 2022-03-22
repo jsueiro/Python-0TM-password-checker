@@ -40,4 +40,9 @@ def main(args):
     return 'done !'
 
 
-main(sys.argv[1:])
+if __name__ == '__main__':
+    if sys.argv[1:]:
+        sys.exit(main(sys.argv[1:]))
+    else:
+        pwd = [str(input('Please enter a password to be validated: '))]
+        main(pwd)
